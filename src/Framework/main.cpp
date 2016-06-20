@@ -3,7 +3,6 @@
  * 開発時は特に気にせず設定ファイル弄くるだけにする予定。
  */
 #include <iostream>
-#include <SDL.h>
 #include <osg/Timer>
 #include <osgGA/EventQueue>
 #include "Config.h"
