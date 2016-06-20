@@ -1,16 +1,19 @@
 TARGET = bin/EngineTest
 
-INCLUDE = -I/usr/local/include/SDL2 -I./src/Engine/include
+INCLUDE = -I/usr/local/include -I/usr/local/include/SDL2 -I./src/Framework/include
+OSG_LIBPATH=/Library/Frameworks
+OSG_LDFLAGS = -L$(OSG_LIBPATH)
 
 CC = g++
 CXXFLAGS = -g -std=c++11 -Wall
-LIB = -lSDL2
+LIB = -L /usr/local/lib -lSDL2
 SRCS = $(shell find ./src -type f -name *.cpp)
 OBJS = $(SRCS:%.cpp=%.o)
-OSXFW = -framework OpenGL
+OSG_LIBS = -F /Library/Frameworks -framework osg -framework OpenThreads -framework osgDB -framework osgFX -framework osgGA -framework osgViewer -framework osgUtil
+OSXFW=$(OSG_LIBS)
 
 $(TARGET):$(OBJS)
-	$(CC) $(CXXFLAGS) $(LIB) -o $(TARGET) $(OBJS) $(INCLUDE) $(OSXFW)
+	$(CC) $(CXXFLAGS) $(OSG_LDFLAGS) $(LIB) -o $(TARGET) $(OBJS) $(INCLUDE) $(OSXFW)
 	$(RM) $(OBJS)
 
 $(OBJS):

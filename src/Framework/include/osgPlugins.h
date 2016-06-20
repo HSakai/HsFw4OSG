@@ -2,4 +2,5 @@
 
 #include <osgDB/Registry>
 
-USE_OSGPLUGIN(obj)
+// 以下のように必要なpluginを書いていくスタイル
+// USE_OSGPLUGIN(obj)

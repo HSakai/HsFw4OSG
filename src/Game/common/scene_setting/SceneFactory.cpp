@@ -4,13 +4,13 @@
 
 namespace HsEngine
 {
-	Scene* SceneFactory::CreateScene (const int sceneId)
-	{
-		switch (sceneId)
-		{
-			case SCENE_SPLASH:
-				return new SceneSplash ();
-		}
-		return nullptr;
-	}
+    Scene* SceneFactory::CreateScene (const int sceneId)
+    {
+        switch (sceneId)
+        {
+            case SCENE_SPLASH:
+                return new SceneSplash ();
+        }
+        return nullptr;
+    }
 }

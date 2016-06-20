@@ -6,16 +6,16 @@
 
 namespace HsEngine
 {
-	const char* GAME_TITLE = "Engineテスト";
+    const char* GAME_TITLE = "Engineテスト";
 
-	const char TARGET_FPS = 60;
+    const char TARGET_FPS = 60;
 
-	const short WINDOW_WIDTH = 960;
+    const short WINDOW_WIDTH = 960;
 
-	const short WINDOW_HEIGHT = 640;
+    const short WINDOW_HEIGHT = 640;
 
-	// Escとqキーで一旦終了させてみる
-	const SDL_Keycode EXIT_KEYCODES[] = { SDLK_ESCAPE, SDLK_q };
+    // Escとqキーで一旦終了させてみる
+    const SDL_Keycode EXIT_KEYCODES[] = { SDLK_ESCAPE, SDLK_q };
 
-	const unsigned EXIT_KEYCODE_LEN = 2;
+    const unsigned EXIT_KEYCODE_LEN = 2;
 }
